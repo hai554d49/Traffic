@@ -1,0 +1,94 @@
+/* =============================================================
+   CSS bổ sung cho Hệ thống quản lý vi phạm giao thông
+   Màu chủ đạo lấy từ template: #f9b116 (vàng) - #252525 (đen)
+   ============================================================= */
+:root {
+    --primary: #f9b116;
+    --dark: #252525;
+}
+
+* { transition: none; }
+a, .btn { transition: all .2s ease-in-out; }
+
+body { background: #f7f7f7; color: #444; }
+p { margin: 0 0 1rem; }
+
+/* ---------- Header ---------- */
+.app-brand { width: auto !important; font-size: 26px; font-weight: 800; color: #fff !important; }
+.app-brand .fa { color: var(--dark); }
+.header_section .dropdown-menu .dropdown-item { font-size: 15px; }
+.header_section .navbar-toggler { border-color: #fff; }
+
+/* ---------- Banner trang chủ ---------- */
+.hero {
+    width: 100%;
+    background: linear-gradient(rgba(20,20,20,.72), rgba(20,20,20,.72)), url(../images/banner-bg.png) center/cover no-repeat;
+    padding: 90px 0 110px;
+}
+.hero h1 { color: #fff; font-size: 52px; font-weight: 800; text-transform: uppercase; text-align: center; }
+.hero p.lead { color: #eee; text-align: center; margin-bottom: 30px; }
+.lookup-box { max-width: 720px; margin: 0 auto; background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.lookup-box .form-control { height: 52px; font-size: 18px; }
+.lookup-box .btn { height: 52px; font-size: 17px; }
+
+.stat-strip { margin-top: -50px; position: relative; z-index: 2; }
+.stat-card { background: #fff; border-radius: 10px; padding: 22px; text-align: center; box-shadow: 0 6px 18px rgba(0,0,0,.08); margin-bottom: 15px; }
+.stat-card .num { font-size: 30px; font-weight: 800; color: var(--dark); }
+.stat-card .lbl { color: #888; }
+.stat-card .fa { font-size: 28px; color: var(--primary); }
+
+.service_box p.service_text { margin: 10px 0 0; }
+.service_box .fa { font-size: 52px; color: #fff; }
+.service_section_2 a:hover .service_box { background: #161616; }
+
+/* ---------- Trang nội dung ---------- */
+.page-banner { width: 100%; background: var(--dark); padding: 40px 0; color: #fff; }
+.page-banner h1 { color: #fff; font-weight: 800; font-size: 34px; padding: 0; }
+.page-banner p { color: #ccc; margin: 5px 0 0; }
+.page-content { width: 100%; padding: 40px 0 0; min-height: 50vh; }
+.footer_section { margin-top: 60px; }
+
+.card-app { border: 0; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,.06); margin-bottom: 24px; }
+.card-app > .card-header { background: #fff; border-bottom: 3px solid var(--primary); font-weight: 700; font-size: 17px; color: var(--dark); }
+
+.btn-app { background: var(--primary); border-color: var(--primary); color: #fff; font-weight: 700; }
+.btn-app:hover, .btn-app:focus { background: var(--dark); border-color: var(--dark); color: #fff; }
+.text-app { color: var(--primary) !important; }
+
+.form-control:focus { border-color: var(--primary) !important; box-shadow: 0 0 0 .2rem rgba(249,177,22,.25); }
+
+.plate {
+    display: inline-block; border: 2px solid #222; border-radius: 4px; padding: 1px 8px;
+    font-weight: 800; letter-spacing: 1px; background: #fff; color: #111; white-space: nowrap;
+}
+
+.amount-box { background: #fff8e6; border: 1px dashed var(--primary); border-radius: 8px; padding: 15px; }
+.amount-box .total { font-size: 28px; font-weight: 800; color: #d9534f; }
+
+.table td, .table th { vertical-align: middle; }
+.table thead th { background: var(--dark); color: #fff; border-color: #333; font-weight: 600; }
+
+/* ---------- Thanh toán QR ---------- */
+.qr-wrap { background: #fff; padding: 12px; display: inline-block; border-radius: 8px; border: 1px solid #eee; }
+.qr-wrap img, .qr-wrap canvas { display: block; margin: 0 auto; }
+.countdown { font-size: 22px; font-weight: 700; color: #d9534f; }
+.wallet-page { max-width: 420px; margin: 0 auto; }
+.wallet-head { background: linear-gradient(135deg, #a50064, #d82d8b); color: #fff; border-radius: 12px 12px 0 0; padding: 20px; }
+.wallet-head h4 { color: #fff; }
+
+#qr-reader { max-width: 480px; margin: 0 auto; }
+
+/* ---------- In ấn ---------- */
+.print-sheet { background: #fff; max-width: 820px; margin: 0 auto; padding: 40px; box-shadow: 0 0 10px rgba(0,0,0,.1); }
+.print-sheet h2 { text-align: center; font-weight: 800; }
+@media print {
+    .no-print, .header_section, .footer_section, .copyright_section { display: none !important; }
+    body { background: #fff; }
+    .print-sheet { box-shadow: none; padding: 0; }
+}
+
+@media (max-width: 767px) {
+    .hero h1 { font-size: 32px; }
+    .hero { padding: 50px 0 80px; }
+    .page-banner h1 { font-size: 26px; }
+}
